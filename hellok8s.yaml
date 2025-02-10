@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellok8s
+spec:
+  containers:
+  - name: hellok8s-container
+    image: registry.wolover.cn/maoyalong/hello:v1
+  imagePullSecrets:
+  - name: my-registry-secret
+

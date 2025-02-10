@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx
+    image: registry.wolover.cn/maoyalong/nginx:latest
+    ports:
+    - containerPort: 80
+  imagePullSecrets:
+  - name: my-registry-secret
+
